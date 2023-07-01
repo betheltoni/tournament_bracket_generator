@@ -6,19 +6,10 @@ import {
     retrieveBracketState,
     updateMatchResult,
 } from "../app/firebaseFunctions"
-import { Bracket } from "@/utils/TournamentTypes"
+import { Bracket, Match, Participant } from "@/utils/TournamentTypes"
 import { v4 as uuidv4 } from "uuid"
 
 export const bracketId = uuidv4()
-interface Participant {
-    name: string
-}
-
-interface Match {
-    participant1: string
-    participant2: string
-    winner: string | null
-}
 
 const Bracket: React.FC = () => {
     const [numParticipants, setNumParticipants] = useState<number>(0)
