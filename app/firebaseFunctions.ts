@@ -1,6 +1,6 @@
 import { Bracket } from "@/utils/TournamentTypes"
 import { db } from "../firebaseConfig" // Assuming you've already set up Firebase
-import { bracketId } from "./page"
+import { bracketId } from "../components/bracket"
 
 const storeBracketState = async (bracket: Bracket) => {
     const flattenedBracket = {
